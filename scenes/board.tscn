@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=3 uid="uid://8lfyyftqppbw"]
+
+[ext_resource type="Script" path="res://scripts/board.gd" id="1_8oxol"]
+
+[node name="Board" type="Node2D"]
+script = ExtResource("1_8oxol")
+_cell_size = 10
+_bg_color = Color(0.194349, 0.194349, 0.194349, 1)
+_cell_color = Color(1, 1, 1, 1)
+
+[node name="StepTimer" type="Timer" parent="."]
+wait_time = 0.1
+
+[connection signal="timeout" from="StepTimer" to="." method="_on_step_timer_timeout"]
