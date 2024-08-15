@@ -10,5 +10,6 @@ _cell_color = Color(1, 1, 1, 1)
 
 [node name="StepTimer" type="Timer" parent="."]
 wait_time = 0.1
+one_shot = true
 
 [connection signal="timeout" from="StepTimer" to="." method="_on_step_timer_timeout"]

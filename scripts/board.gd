@@ -2,14 +2,14 @@ extends Node2D
 
 const _random_keys: Dictionary = {
 	KEY_1: 1,
-	KEY_2: 5,
-	KEY_3: 10,
-	KEY_4: 15,
-	KEY_5: 20,
-	KEY_6: 25,
-	KEY_7: 30,
-	KEY_8: 35,
-	KEY_9: 40,
+	KEY_2: 2,
+	KEY_3: 5,
+	KEY_4: 10,
+	KEY_5: 15,
+	KEY_6: 20,
+	KEY_7: 25,
+	KEY_8: 30,
+	KEY_9: 35,
 }
 
 @export_range(5, 100, 5) var _cell_size: int
@@ -169,6 +169,7 @@ func _input(event: InputEvent) -> void:
 
 func _on_step_timer_timeout() -> void:
 	_step()
+	_step_timer.start()
 
 
 func _process_cells() -> void:
